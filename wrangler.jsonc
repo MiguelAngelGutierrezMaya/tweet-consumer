@@ -13,13 +13,21 @@
   "queues": {
     "consumers": [
       {
-        "queue": "my-queue"
+        "queue": "create-tweets",
+				"max_batch_size": 10,
+        "max_batch_timeout": 30,
+        "max_retries": 5,
+        "dead_letter_queue": "create-tweets-dlq"
       }
     ],
-    "producers": [
+		"producers": [
       {
-        "binding": "MY_QUEUE",
-        "queue": "my-queue"
+        "queue": "create-tweets",
+        "binding": "CREATE_TWEETS_QUEUE"
+      },
+			{
+        "queue": "create-tweets-dlq",
+        "binding": "CREATE_TWEETS_QUEUE_DLQ"
       }
     ]
   }
