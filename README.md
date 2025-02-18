@@ -36,7 +36,7 @@ The project follows a hexagonal (ports and adapters) architecture:
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/yourusername/tweet-creation-service.git
+git clone https://github.com/MiguelAngelGutierrezMaya/tweet-consumer
 cd tweet-creation-service
 ```
 
